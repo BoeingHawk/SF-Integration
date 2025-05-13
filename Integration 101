@@ -1,0 +1,21 @@
+// Video Link: https://www.youtube.com/watch?v=2myol9hI28c&t=1061s
+
+API used is REST API
+
+
+//Task 1:
+// API: https://gorest.co.in/
+
+Things Learnt in the process:
+
+1) Downloading the Postman API Tool
+2) Making a callout to an Open API using GET Method
+3) Making a callout to an Open API using POST Method
+4) Inserting new data using POST Method, by passing data in the request Body.
+5) Info about Authorization Header and passing the Access Token to the Header for Authorization
+
+
+//Task 2:
+API: https://spoonacular.com/food-api
+
+
