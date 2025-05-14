@@ -32,3 +32,79 @@ Check the image added in the Repo.
 
 Apex Class is as below:
 
+
+======================================================
+
+public class ZipCodeApi{
+
+ 	public static String API = 'https://api.zipcodestack.com/v1/search?apikey=zip_live_OIdUEzsHGzuaKvl6rsk8kyQ5AcJyhqxcsXYnSjyu&codes=10001&country=US';
+
+    public static void getCityName(Integer zipCode, String countryCode){
+		Http h = new Http();
+		HttpRequest request = new HttpRequest();
+		Request.setEndpoint(API);
+        Request.setMethod('GET');
+
+		HttpResponse response = h.send(request);
+
+        if(response.getStatusCode() == 200){
+			String responseBody = response.getBody();
+            System.debug('Response: '+responseBody);
+            
+        }
+    }
+}
+
+======================================================
+
+
+
+#Explanation of the Apex Class
+
+============================================================================================================
+============================================================================================================
+
+
+//class declaration
+
+public class ZipCodeApi{
+
+//passing the API URL with parameters (like API Key, Zipcode and CountryCode)
+ 	public static String API = 'https://api.zipcodestack.com/v1/search?apikey=zip_live_OIdUEzsHGzuaKvl6rsk8kyQ5AcJyhqxcsXYnSjyu&codes=10001&country=US';
+
+
+//declaration of method
+
+    public static void getCityName(Integer zipCode, String countryCode){
+
+//mandatory Http class initialization
+		Http h = new Http();
+
+//HttpRequest class initialization
+		HttpRequest request = new HttpRequest();
+
+//setting the Endpoint and passign the API from the variable set above
+		Request.setEndpoint(API);
+
+//since we are requuesting the information, we will use the GET method
+        Request.setMethod('GET');
+
+//HttpResponse is the data type of the variable response.
+//help in storing reponse give by the API, from the request we are sending from the .send() method.
+		HttpResponse response = h.send(request);
+
+
+//check if data is received correctly from the response code
+        if(response.getStatusCode() == 200){
+			      String responseBody = response.getBody();
+                System.debug('Response: '+responseBody);
+            
+        }
+    }
+}
+
+
+
+============================================================================================================
+============================================================================================================
+
