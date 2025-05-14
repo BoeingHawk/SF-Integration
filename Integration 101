@@ -24,3 +24,44 @@ API: https://spoonacular.com/food-api
 HTTP Callout = When we want ot make a callout to an External System from Salesforce 
 
 REST API = When Salesforce is exposed to the outside/3rd Party, so that new records or data can be shared.
+
+
+
+
+
+Types of Integration in Salesforce:
+
+1) Callout: 
+How to identify: Check if Salesforce data is exposed or not to the 3rd party or any other system?
+
+General Scenario: You want to connect your Salesforce org to a external/3rd party system (like weather API, Zipcode API) to get the data from the API.
+
+
+Scenario:
+Connect Salesforce with the ZipCode API to pass the zipcode and fetch the Cityname into Salesforce Org.
+
+#Identification: Salesforce data is not exposed as it only wants data from the external/3rd party system.
+
+Which API will be used: HTTP Callout
+
+
+Steps to do to achieve this task:
+
+1) Sign up for the API and get the API KEY
+2) Open POSTMAN and click on the NEW REQUEST (+ icon on the top) and then make sure the METHOD is GET and pass the URL with the Query Parameter (that contains the API Key as well). 
+
+//Example: http://api.zipcodestack.com/v1/search?apikey=zip_live_OIdUEzsHGzuaKvl6rsk8kyQ5AcJyhqxcsXYnSjyu&codes=10001&country=US
+
+Structure of URL: Domain+Path+Query Parameters with key and values
+
+Check the image added in the Repo. 
+
+3) Check the returned status (it should be 200 OK) and also checked the returned data.
+
+4) Once the data and status is confirmed, everything is okay and we can proceed to continue to use the API in the APEX and call it via LWC or FLOW. 
+
+#Check the example code posted in this repo for further understanding.
+
+
+
+ 
