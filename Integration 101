@@ -21,6 +21,8 @@ API: https://spoonacular.com/food-api
 
 
 
+
+
 HTTP Callout = When we want ot make a callout to an External System from Salesforce 
 
 REST API = When Salesforce is exposed to the outside/3rd Party, so that new records or data can be shared.
